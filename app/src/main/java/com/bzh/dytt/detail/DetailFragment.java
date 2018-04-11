@@ -24,7 +24,7 @@ import com.bzh.dytt.base.basic.FragmentContainerActivity;
 import com.bzh.dytt.base.basic_pageswitch.PageFragment;
 import com.bzh.dytt.base.basic_pageswitch.PagePresenter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class DetailFragment extends PageFragment implements IDetailView {
@@ -37,145 +37,145 @@ public class DetailFragment extends PageFragment implements IDetailView {
         FragmentContainerActivity.launch(from, DetailFragment.class, fragmentArgs);
     }
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    @Bind(R.id.film_poster)
+    @BindView(R.id.film_poster)
     ImageView filmPoster;
 
-    @Bind(R.id.appbar)
+    @BindView(R.id.appbar)
     AppBarLayout appbar;
 
-    @Bind(R.id.collapsing_toolbar)
+    @BindView(R.id.collapsing_toolbar)
     CollapsingToolbarLayout collapsingToolbar;
 
     // 片名
-    @Bind(R.id.layout_name)
+    @BindView(R.id.layout_name)
     LinearLayout layout_name;
-    @Bind(R.id.name)
+    @BindView(R.id.name)
     TextView name;
 
     // 译名
-    @Bind(R.id.layout_translationName)
+    @BindView(R.id.layout_translationName)
     LinearLayout layout_translationName;
-    @Bind(R.id.translationName)
+    @BindView(R.id.translationName)
     TextView translationName;
 
     // 年代
-    @Bind(R.id.layout_years)
+    @BindView(R.id.layout_years)
     LinearLayout layout_years;
-    @Bind(R.id.years)
+    @BindView(R.id.years)
     TextView years;
 
     // 国家
-    @Bind(R.id.layout_country)
+    @BindView(R.id.layout_country)
     LinearLayout layout_country;
-    @Bind(R.id.country)
+    @BindView(R.id.country)
     TextView country;
 
     // 类型
-    @Bind(R.id.layout_category)
+    @BindView(R.id.layout_category)
     LinearLayout layout_category;
-    @Bind(R.id.category)
+    @BindView(R.id.category)
     TextView category;
 
     // 语言
-    @Bind(R.id.layout_language)
+    @BindView(R.id.layout_language)
     LinearLayout layout_language;
-    @Bind(R.id.language)
+    @BindView(R.id.language)
     TextView language;
 
     // 字幕
-    @Bind(R.id.layout_subtitle)
+    @BindView(R.id.layout_subtitle)
     LinearLayout layout_subtitle;
-    @Bind(R.id.subtitle)
+    @BindView(R.id.subtitle)
     TextView subtitle;
 
     // 字幕
-    @Bind(R.id.layout_showTime)
+    @BindView(R.id.layout_showTime)
     LinearLayout layout_showTime;
-    @Bind(R.id.showTime)
+    @BindView(R.id.showTime)
     TextView showTime;
 
     // 集数
-    @Bind(R.id.layout_episodeNumber)
+    @BindView(R.id.layout_episodeNumber)
     LinearLayout layout_episodeNumber;
-    @Bind(R.id.episodeNumber)
+    @BindView(R.id.episodeNumber)
     TextView episodeNumber;
 
     // 来源
-    @Bind(R.id.layout_source)
+    @BindView(R.id.layout_source)
     LinearLayout layout_source;
-    @Bind(R.id.source)
+    @BindView(R.id.source)
     TextView source;
 
     // IMDB评分
-    @Bind(R.id.layout_imdb)
+    @BindView(R.id.layout_imdb)
     LinearLayout layout_imdb;
-    @Bind(R.id.imdb)
+    @BindView(R.id.imdb)
     TextView imdb;
 
     // 发布时间
-    @Bind(R.id.layout_publishTime)
+    @BindView(R.id.layout_publishTime)
     LinearLayout layout_publishTime;
-    @Bind(R.id.publishTime)
+    @BindView(R.id.publishTime)
     TextView publishTime;
 
     // 上映时间
-    @Bind(R.id.layout_playtime)
+    @BindView(R.id.layout_playtime)
     LinearLayout layout_playtime;
-    @Bind(R.id.playtime)
+    @BindView(R.id.playtime)
     TextView playtime;
 
     // 视频格式
-    @Bind(R.id.layout_fileFormat)
+    @BindView(R.id.layout_fileFormat)
     LinearLayout layout_fileFormat;
-    @Bind(R.id.fileFormat)
+    @BindView(R.id.fileFormat)
     TextView fileFormat;
 
     // 视频尺寸
-    @Bind(R.id.layout_videoSize)
+    @BindView(R.id.layout_videoSize)
     LinearLayout layout_videoSize;
-    @Bind(R.id.videoSize)
+    @BindView(R.id.videoSize)
     TextView videoSize;
 
     // 文件大小
-    @Bind(R.id.layout_fileSize)
+    @BindView(R.id.layout_fileSize)
     LinearLayout layout_fileSize;
-    @Bind(R.id.fileSize)
+    @BindView(R.id.fileSize)
     TextView fileSize;
 
     // 导演
-    @Bind(R.id.layout_director)
+    @BindView(R.id.layout_director)
     LinearLayout layout_director;
-    @Bind(R.id.director)
+    @BindView(R.id.director)
     TextView director;
 
     // 编辑
-    @Bind(R.id.layout_screenWriters)
+    @BindView(R.id.layout_screenWriters)
     LinearLayout layout_screenWriters;
-    @Bind(R.id.screenWriters)
+    @BindView(R.id.screenWriters)
     TextView screenWriters;
 
     // 主演
-    @Bind(R.id.layout_leadingPlayers)
+    @BindView(R.id.layout_leadingPlayers)
     LinearLayout layout_leadingPlayers;
-    @Bind(R.id.leadingPlayers)
+    @BindView(R.id.leadingPlayers)
     TextView leadingPlayers;
 
     // 描述
-    @Bind(R.id.layout_description)
+    @BindView(R.id.layout_description)
     LinearLayout layout_description;
-    @Bind(R.id.description)
+    @BindView(R.id.description)
     TextView description;
 
     // 预览
-    @Bind(R.id.layout_previewImage)
+    @BindView(R.id.layout_previewImage)
     LinearLayout layout_previewImage;
-    @Bind(R.id.previewImage)
+    @BindView(R.id.previewImage)
     ImageView previewImage;
 
     private DetailPresenter detailPresenter;

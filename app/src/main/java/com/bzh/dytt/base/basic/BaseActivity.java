@@ -10,6 +10,7 @@ import com.umeng.analytics.MobclickAgent;
 import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * ==========================================================<br>
@@ -24,6 +25,7 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends AppCompatActivity {
 
     private ActivityConfig activityConfig;
+    private Unbinder unbinder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getContentViewResId());
 
         if (activityConfig.isApplyButterKnife) {
-            ButterKnife.bind(this);
+            unbinder= ButterKnife.bind(this);
         }
 
         if (activityConfig.isApplyEventBus) {
@@ -45,7 +47,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         if (activityConfig.isApplyButterKnife) {
-            ButterKnife.unbind(this);
+            unbinder.unbind();
         }
         if (activityConfig.isApplyEventBus) {
             EventBus.getDefault().unregister(this);

@@ -10,7 +10,7 @@ import com.bzh.dytt.R;
 import com.bzh.dytt.base.basic.BaseFragment;
 import com.jakewharton.rxbinding.view.RxView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * ==========================================================<br>
@@ -26,19 +26,19 @@ public abstract class PageFragment extends BaseFragment implements IPageView {
 
     private static final String TAG = "PageFragment";
 
-    @Bind(R.id.layoutLoading)
+    @BindView(R.id.layoutLoading)
     LinearLayout layoutLoading;
 
-    @Bind(R.id.layoutLoadFailed)
+    @BindView(R.id.layoutLoadFailed)
     LinearLayout layoutLoadFailed;
 
-    @Bind(R.id.txtLoadFailed)
+    @BindView(R.id.txtLoadFailed)
     TextView txtLoadFailed;
 
-    @Bind(R.id.layoutEmpty)
+    @BindView(R.id.layoutEmpty)
     LinearLayout layoutEmpty;
 
-    @Bind(R.id.layoutContent)
+    @BindView(R.id.layoutContent)
     LinearLayout layoutContent;
 
     private PagePresenter pagePresenter;

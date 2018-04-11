@@ -8,7 +8,7 @@ import android.support.v4.view.ViewPager;
 import com.bzh.dytt.R;
 import com.bzh.dytt.base.basic.BaseFragment;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * ==========================================================<br>
@@ -24,11 +24,11 @@ public abstract class TabLayoutFragment extends BaseFragment implements TabLayou
 
     protected TabLayoutPresenter tabLayoutPresenter;
 
-    @Bind(R.id.tabLayout)
+    @BindView(R.id.tabLayout)
     protected
     TabLayout tabLayout;
 
-    @Bind(R.id.viewpager)
+    @BindView(R.id.viewpager)
     protected
     ViewPager container;
 

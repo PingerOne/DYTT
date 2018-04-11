@@ -15,6 +15,7 @@ import org.greenrobot.eventbus.EventBus;
 import java.lang.reflect.Field;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * ==========================================================<br>
@@ -38,6 +39,8 @@ public abstract class BaseFragment extends Fragment {
     private boolean isFirstInvisible = true;
     private boolean isCallSetUserVisibleHint = false;
 
+    private Unbinder unbinder;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -53,7 +56,7 @@ public abstract class BaseFragment extends Fragment {
         fragmentConfig = new FragmentConfig();
         initUIConfig(fragmentConfig);
         if (fragmentConfig.isApplyButterKnife) {
-            ButterKnife.bind(this, view);
+            unbinder=  ButterKnife.bind(this, view);
         }
 
         if (fragmentConfig.isApplyEventBus) {
@@ -78,7 +81,7 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         if (fragmentConfig.isApplyButterKnife) {
-            ButterKnife.unbind(this);
+            unbinder.unbind();
         }
 
         if (fragmentConfig.isApplyEventBus) {

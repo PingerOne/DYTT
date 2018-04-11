@@ -19,7 +19,7 @@ import com.bzh.dytt.base.basic_pageswitch.PagePresenter;
 import com.bzh.recycler.ExRecyclerView;
 import com.jakewharton.rxbinding.view.RxView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * ==========================================================<br>
@@ -35,10 +35,10 @@ public abstract class RefreshRecyclerFragment extends PageFragment implements Re
 
     private static final String TAG = "PageFragment";
 
-    @Bind(R.id.refreshLayout)
+    @BindView(R.id.refreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     ExRecyclerView recyclerView;
 
     @Override

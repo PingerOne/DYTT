@@ -27,7 +27,7 @@ import com.bzh.log.MyLog;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -40,16 +40,16 @@ public class MainActivity extends BaseActivity
 
     ActionBarDrawerToggle toggle;
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
 
-    @Bind(R.id.nav_view)
+    @BindView(R.id.nav_view)
     NavigationView navigationView;
 
-    @Bind(R.id.viewPager)
+    @BindView(R.id.viewPager)
     XViewPager container;
     private CircleImageView iv_head;
     private ImageView iv_header_view_background;
